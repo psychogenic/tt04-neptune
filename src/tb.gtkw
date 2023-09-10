@@ -1,30 +1,52 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Fri Jul 21 10:59:05 2023
+[*] Sun Sep 10 20:19:39 2023
 [*]
-[dumpfile] "/home/matt/work/asic-workshop/shuttle-2309C/tt04-verilog-demo/src/tb.vcd"
-[dumpfile_mtime] "Fri Jul 21 10:58:31 2023"
-[dumpfile_size] 4298151
-[savefile] "/home/matt/work/asic-workshop/shuttle-2309C/tt04-verilog-demo/src/tb.gtkw"
+[dumpfile] "tb.vcd"
+[dumpfile_mtime] "Sun Sep 10 20:12:52 2023"
+[dumpfile_size] 9543748
+[savefile] "tb.gtkw"
 [timestart] 0
-[size] 2286 698
-[pos] -1 -1
-*-33.900002 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 3370 1359
+[pos] -133 -133
+*-38.084721 693049000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
+[treeopen] tb.tt_um_psychogenic_neptuneproportional.
+[treeopen] tb.tt_um_psychogenic_neptuneproportional.tuner.
+[treeopen] tb.tt_um_psychogenic_neptuneproportional.tuner.display.
 [sst_width] 343
-[signals_width] 414
+[signals_width] 605
 [sst_expanded] 1
-[sst_vpaned_height] 190
-@28
-tb.rst_n
-tb.clk
-@22
-tb.segments[6:0]
-tb.uio_out[7:0]
-tb.tt_um_seven_segment_seconds.compare[23:0]
-@28
-tb.tt_um_seven_segment_seconds.rst_n
-@22
+[sst_vpaned_height] 421
+@c00022
 tb.ui_in[7:0]
+@28
+(0)tb.ui_in[7:0]
+(1)tb.ui_in[7:0]
+(2)tb.ui_in[7:0]
+(3)tb.ui_in[7:0]
+(4)tb.ui_in[7:0]
+(5)tb.ui_in[7:0]
+(6)tb.ui_in[7:0]
+(7)tb.ui_in[7:0]
+@1401200
+-group_end
+@28
++{reset} tb.tt_um_psychogenic_neptuneproportional.rst
+[color] 3
+tb.input_pulse
+@2028
+[color] 2
+^1 ./util/sevseg-translate.txt
++{prox segs} tb.tt_um_psychogenic_neptuneproportional.tuner.display.proxdisplay.segments[7:0]
+[color] 1
+^1 ./util/sevseg-translate.txt
++{note segs} tb.tt_um_psychogenic_neptuneproportional.tuner.display.notedisplay.segments[7:0]
+@4024
+[color] 1
+^>1 ./util/pulseToFreq.py
++{in count Hz} tb.tt_um_psychogenic_neptuneproportional.tuner.pulsecounter.pulseCount[14:0]
+@24
++{in count raw} tb.tt_um_psychogenic_neptuneproportional.tuner.pulsecounter.pulseCount[14:0]
 [pattern_trace] 1
 [pattern_trace] 0

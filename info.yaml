@@ -48,7 +48,7 @@ documentation:
       Set the clocking bits to 0b000 for a 1kHz clock input (input bits
       2,3 and 4).
       Input pulses are fed to input bit 5.  The raw count of pulses over
-      the sampling period (hard-coded here to 0.35 seconds) is output on 
+      the sampling period (hard-coded here to 0.5 seconds) is output on 
       the bidir pins.  The output is setup to drive a dual 7-segment display, or a single 7-segment (by using the output_display bits on
       the input).  In single mode, the 7-seg dot marks exact match.
 

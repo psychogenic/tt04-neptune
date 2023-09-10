@@ -8,8 +8,6 @@ that can be driven / tested by the cocotb test.py
 
 // testbench is controlled by test.py
 module tb (
-    input clk,
-    input rst_n,
     input [2:0] clk_config,
     input input_pulse,
     input display_single_enable,
@@ -26,8 +24,8 @@ module tb (
     end
 
     // wire up the inputs and outputs
-    // reg  clk;
-    // reg  rst_n;
+    reg  clk;
+    reg  rst_n;
     reg  ena;
     // reg  [7:0] ui_in;
     reg  [7:0] uio_in;
@@ -38,12 +36,12 @@ module tb (
     assign prox_select = uo_out[7];
     assign segments = uo_out[6:0];
     
-    
+    wire [7:0] ui_in2 = 8'b11110111;
     wire [7:0] ui_in = {display_single_select, 
                         display_single_enable, 
                         input_pulse, 
                         clk_config[2], clk_config[1], clk_config[0],
-                        0,0};
+                        1'b0,1'b0};
 
     tt_um_psychogenic_neptuneproportional tt_um_psychogenic_neptuneproportional(
     // include power ports for the Gate Level test

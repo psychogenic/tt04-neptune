@@ -1,0 +1,54 @@
+#translate file for 7-seg display, gtkwave
+# prox, pure sprites
+00101010	LOW,close
+00111000	LOW,far
+01000110	HI,close
+11000100	HI,far
+00000001	exact
+00000000	exact
+#same but with high bit selector low and right shift
+00010101	LOW,close
+00011100	LOW,far
+00100011	HI,close
+01100010	HI,far
+
+
+
+
+
+# Notes
+# 
+# Sprite(notes.Scale.NA,     Const(0b00000010)), # -
+# Sprite(notes.Scale.A,      Const(0b11101110)), # A
+# Sprite(notes.Scale.B,      Const(0b00111110)), # b
+# Sprite(notes.Scale.C,      Const(0b10011100)), # C
+# Sprite(notes.Scale.D,      Const(0b01111010)), # d
+# Sprite(notes.Scale.E,      Const(0b10011110)), # E
+# Sprite(notes.Scale.F,      Const(0b10001110)), # F
+# Sprite(notes.Scale.G,      Const(0b11110110)), # g
+# 
+# pure sprites
+00000010	-
+11101110	A
+00111110	B
+10011100	C
+01111010	D
+10011110	E
+10001110	F
+11110110	G
+# same but with high bit selector and right shift
+10000001	-
+11110111	A/Gx
+10011111	B/Ex
+11001110	C
+10111101	D
+11001111	E
+11000111	F
+11111011	G
+# single display note exact
+11101111	Ax
+00111111	Bx
+10011101	Cx
+01111011	Dx
+10001111	Fx
+

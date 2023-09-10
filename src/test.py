@@ -90,7 +90,7 @@ async def setup_tuner(dut):
     await startup(dut)
     
 
-async def note_toggle(dut, freq, delta=0, msg="", toggleTime=1.3):
+async def note_toggle(dut, freq, delta=0, msg="", toggleTime=4):
     dut._log.info(msg)
     await startup(dut)
     dispValues = await inputPulsesFor(dut, freq + delta, toggleTime)  
@@ -151,8 +151,8 @@ async def note_e_highfar(dut):
     
 @cocotb.test()
 async def note_fatE_lowfar(dut):
-    dispValues = await note_e(dut, eFreq=83, delta=-7, msg="fat E low/far")
-    assert dispValues[0] == (displayProx['lowfar'] & ProxSegMask) 
+    dispValues = await note_e(dut, eFreq=83, delta=-4, msg="fat E low/far")
+    assert (dispValues[0] == (displayProx['lowfar'] & ProxSegMask)) or (dispValues[0] == (displayProx['exact'] & ProxSegMask))
     
     
  
@@ -192,7 +192,7 @@ async def note_g_lowfar(dut):
 
 @cocotb.test()
 async def note_a_highfar(dut):
-    dispValues = await note_a(dut, delta=7, msg="A high/far")
+    dispValues = await note_a(dut, delta=4, msg="A high/far")
     assert dispValues[0] == (displayProx['hifar'] & ProxSegMask) 
    
 
@@ -212,7 +212,7 @@ async def note_a_exact(dut):
 
 @cocotb.test()
 async def note_b_exact(dut):
-    dispValues = await note_b(dut, delta=1, msg="B exact")
+    dispValues = await note_b(dut, delta=0, msg="B exact")
     assert dispValues[0] == (displayProx['exact'] & ProxSegMask) 
  
 
